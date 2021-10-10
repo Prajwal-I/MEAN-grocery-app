@@ -1,0 +1,26 @@
+<div class="container">
+    <br><br>
+    <button class="btn btn-info" (click)="backToDash()">Back</button>
+    <br><br>
+
+    <h1>My cart</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Item name</th>
+                <th scope="col">Item price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let c of cart">
+                <td>{{c[0].product_name}}</td>
+                <td>{{c[0].product_price}}</td>
+                <td><button class="btn btn-danger"(click)="removeItem(c[0])">Remove item</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <h2>total = {{total}}</h2>
+    <br><br>
+    <button class="btn btn-success" (click)="placeOrder()">Place Order</button>
+</div>

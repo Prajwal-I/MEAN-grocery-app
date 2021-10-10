@@ -1,0 +1,30 @@
+<div class="container">
+
+    <button class="btn btn-primary" (click)="back()">Back</button>
+    <div class="logincard">
+        <form [formGroup]="signupForm" (ngSubmit)="signup()">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Product Name</label>
+                <input type="email" class="form-control" id="user_email" formControlName="product_name">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">product_qty</label>
+                <input type="number" class="form-control" id="user_password" formControlName="product_qty_available">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Price</label>
+                <input type="number" class="form-control" id="user_password" formControlName="product_price">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Category</label>
+                <input type="text" class="form-control" id="user_password" formControlName="product_category">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Image URL</label>
+                <input type="text" class="form-control" id="user_password" formControlName="product_image">
+            </div>
+            <button type="submit" class="btn btn-primary">Add</button>
+            <br>
+        </form>
+    </div>
+</div>

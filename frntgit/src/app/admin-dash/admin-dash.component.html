@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="header">
+        <div class="searchbar">
+            <input type="search" id='search_bar' [(ngModel)]="pname">
+            <button class="btn btn-warning" (click)="search()">search</button>
+        </div>
+        <div class="buttons">
+            <button class="btn btn-info" (click)="addProduct()">Add Product</button>
+            <!-- <button class="btn btn-primary"(click)="openOrders()">Orders</button> -->
+            <!-- <button class="btn btn-success"(click)="openProfile()">Profile</button> -->
+            <button class="btn btn-danger"(click)="logout()" *ngIf="user">Logout</button>
+        </div>
+    </div>
+    
+    <div class="products_body">
+        <div class="row">
+            <div class="col-6 col-md-4" *ngFor="let i of products_all">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" height="282" src="{{i.product_image}}" alt="Card image cap">
+                    <div class="card-body">
+                        <h2 class="card-title">{{i.product_name}}</h2>
+                        <p class="card-text">Category - {{i.product_category}}</p>
+                        <p class="card-text">Available items - {{i.product_qty_available}}</p>
+                        <p class="card-text">Price - {{i.product_price}}</p>
+                        <button class="btn btn-primary" (click)="editProduct(i)">Edit Product</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+$header_margin:2rem;
+$button_margin:1rem;
+$body_padding_top:8rem;
+$card_margin:2rem;
+$img-height:282px;
+
+.header{
+    margin-top: $header_margin;
+    margin-bottom: $header_margin;
+
+    .searchbar{
+        float: left;
+    }
+    .btn{
+        margin:$button_margin;
+    }
+
+    .buttons {
+        float: right;
+    }
+}
+
+.products_body{
+    padding-top: $body_padding_top ;
+    padding-bottom: $body_padding_top;
+
+    .card{
+        margin-top: $card_margin;
+        margin-right: $card_margin;
+        border-top-width: 3px;
+        border-bottom-width: 3px;
+        border-right-width: 3px;
+        border-left-width: 3px;
+    }
+}
